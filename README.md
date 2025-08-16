@@ -24,7 +24,11 @@ Search for movies using the [OMDb API](https://www.omdbapi.com/), view details, 
 ![Watchlist Preview](images/demo1.jpg)
 
 ---
+## Deployed Version
 
+[Link](https://movie-watchlist-eight-rouge.vercel.app/)
+
+---
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)  
