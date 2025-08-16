@@ -2,7 +2,7 @@ document.getElementById("search").addEventListener("click", function(event) {
     event.preventDefault();
     const searchInput = document.getElementById("search-input").value;
 
-    fetch(`http://www.omdbapi.com/?apikey=df1d654f&s=${searchInput}`)
+    fetch(`https://www.omdbapi.com/?apikey=df1d654f&s=${searchInput}`)
         .then(response => response.json())
         .then(data => {
             const resultsContainer = document.getElementById("results-container");
