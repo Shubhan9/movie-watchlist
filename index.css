@@ -1,0 +1,156 @@
+/* ===== Reset / Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+body {
+  background: #f7f3e9;
+  color: #2c2c2c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* ===== Shared Header ===== */
+#cont {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #e0c097; /* vintage paper feel */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #8b5e3c; /* brown divider */
+}
+
+#cont h1 {
+  font-size: 2rem;
+  color: #4b2e2e; /* deep brown */
+  letter-spacing: 2px;
+}
+
+#cont a {
+  color: #4b2e2e;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border: 2px solid #4b2e2e;
+  border-radius: 4px;
+  transition:0.3s ease, color 0.3s ease;
+}
+
+#cont a:hover {
+  background: #4b2e2e;
+  color: #f7f3e9;
+}
+
+/* ===== Search Bar (Index only) ===== */
+form {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#search-input {
+  padding: 0.6rem 1rem;
+  border: 2px solid #8b5e3c;
+  border-radius: 4px;
+  width: 280px;
+  background: #fffaf3;
+  color: #2c2c2c;
+  font-size: 1rem;
+}
+
+#search {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  border: 2px solid #8b5e3c;
+  background: #d9a066; /* muted gold */
+  color: #2c2c2c;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#search:hover {
+  background: #8b5e3c;
+  color: #fffaf3;
+}
+
+/* ===== Movie & Watchlist Cards ===== */
+#results-container, #watchlist-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie, .watchlist-item {
+  background: #fffaf3;
+  border: 2px solid #d9a066;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.movie:hover, .watchlist-item:hover {
+  transform: translateY(-4px);
+}
+
+.movie img, .watchlist-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #8b5e3c;
+  margin-bottom: 0.8rem;
+  background: url("placeholder.png"); /*Fallback for missing */
+}
+
+.movie h3, .watchlist-item h4 {
+  color: #4b2e2e;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.movie p, .watchlist-item p {
+  font-size: 0.9rem;
+  color: #5c4b3c;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* ===== Buttons ===== */
+.movie button, .watchlist-item button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 2px solid #8b5e3c;
+  background: #e0c097;
+  color: #2c2c2c;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.movie button:hover, .watchlist-item button:hover {
+  background: #8b5e3c;
+  color: #fffaf3;
+}
+
+/* ===== Error message ===== */
+.error {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #8b2e2e;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
